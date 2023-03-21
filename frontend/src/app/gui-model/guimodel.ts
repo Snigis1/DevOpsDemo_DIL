@@ -87,6 +87,59 @@ export class GuiModel {
                         }
                     ]
                 },
+                
+                {
+                    "id": "NotImplementedFormModal",
+                    "title": "NotImplemented",
+                    "url": "/dummyform",
+                    "formFieldList": [
+                        {
+                            "id": "NotImplemented",
+                            "type": "label",
+                            "name": "NotImplementedMessage",
+                            "width": 2
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "TicketForm",
+                    "title": { default: "Neues Ticket" },
+                    "url": "/ticket",
+                    "formFieldList": [
+                        {
+                            "id":   "title",
+                            "type": "text",
+                            "name": { default: "Titel" },
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": { default: "Text" },
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
             ],
             "pageList": [
                 {
@@ -102,10 +155,19 @@ export class GuiModel {
                             "type": "button",
                             "name": { default: "ToDo-List" },
                             "icon": "fa-file-alt",
-                            "color": "wet-asphalt",
+                            "color": "orange",
                             "page": "toDoPage",
-                            "width": 2,
+                            "width": 1,
                             "newRow": true,
+                        },
+                        
+                        {
+                        "type": "button",
+                        "name": { default: "Tickets" },
+                        "icon": "fa-solid fa-ticket",
+                        "color": "orange",
+                        "page": "ticketsPage",
+                        "width": 1,
                         },
                     ]
                 },
@@ -134,6 +196,35 @@ export class GuiModel {
                             "url": "/todo",
                             "form": {
                                 "form": "ToDoForm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "ticketsPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neues Ticket"},
+                            "icon": "fa-solid fa-ticket",
+                            "color": "orange",
+                            "width": 2,
+                            "form" : {
+                                "form" : "TicketForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "name": "Ticket",
+                            "icon": "fa-solid fa-ticket",
+                            "color": "orange",
+                            "search": true,
+                            "url": "/ticket",
+                            "form": {
+                                "form": "TicketForm"
                             }
                         }
                     ]
