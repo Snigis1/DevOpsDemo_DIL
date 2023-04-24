@@ -17,6 +17,7 @@
 			"**/node_modules",
 			"**/.metadata",
 			"**/archetype-resources"
-		]
+		],
+		"java.debug.settings.onBuildFailureProceed": true
 	}
 }
