@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TicketController {
 
-    private Map<Integer, Ticket> tickets = new HashMap<Integer, Ticket>();
+    private Map<Integer, Ticket> tickets = new HashMap<>();
 
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
