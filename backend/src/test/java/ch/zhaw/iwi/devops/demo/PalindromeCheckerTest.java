@@ -38,6 +38,7 @@ public class PalindromeCheckerTest {
     public void testIsPalindromeWithWhitespaceInput() {
         PalindromeChecker palindromeChecker = new PalindromeChecker();
         assertTrue(palindromeChecker.isPalindrome("sugus"));
+        assertTrue(palindromeChecker.isPalindrome("radar"));
         assertTrue(palindromeChecker.isPalindrome("bob"));
         assertFalse(palindromeChecker.isPalindrome("hello world"));
     }
