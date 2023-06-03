@@ -169,6 +169,15 @@ export class GuiModel {
                         "page": "ticketsPage",
                         "width": 1,
                         },
+
+                        {
+                            "type": "button",
+                            "name": { default: "DevOps" },
+                            "icon": "fa-solid fa-ticket",
+                            "color": "orange",
+                            "page": "ticketsPage",
+                            "width": 1,
+                            },
                     ]
                 },
                 {
