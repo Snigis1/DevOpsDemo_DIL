@@ -175,7 +175,7 @@ export class GuiModel {
                             "name": { default: "DevOps" },
                             "icon": "fa-solid fa-ticket",
                             "color": "orange",
-                            "page": "MainMenu",
+                            "page": "DevOpsPage",
                             "width": 1,
                         },
                     ]
